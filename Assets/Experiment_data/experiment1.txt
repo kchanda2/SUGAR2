@@ -1,0 +1,10 @@
+Human task completion time :0
+Number of times door opened :0
+Human task completion time :0
+Number of times door opened :0
+Human task completion time :0
+Number of times door opened :0
+Human task completion time :20.63199
+Number of times door opened :1
+Human task completion time :23.25181
+Number of times door opened :1

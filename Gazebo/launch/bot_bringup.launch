@@ -1,0 +1,13 @@
+<launch>
+	<arg name="map_file" default="$(find asp_navigation)/maps/kishanmap_v4.yaml" />
+
+	<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
+	<include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"> </include>
+
+	<include file="$(find turtlebot_navigation)/launch/amcl_demo.launch">
+	    <arg name="map_file" value="$(arg map_file)" />
+	</include>
+
+	<include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+	<node name="rosbag_record" pkg="asp_navigation" type="rosbag_record.py"/>
+</launch>

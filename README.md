@@ -38,7 +38,7 @@ Then run the following command in a terminal to start rosbridge.
 ```
 roslaunch file_server publish_description_turtlebot2.launch
 ```
-The codebase can be deployed to a real robot by running the following command:
+The codebase can be run to a real robot by deploying the package to a real robot and running the following command:
 ```
 roslaunch asp_navigation bot_bringup.launch
 ```

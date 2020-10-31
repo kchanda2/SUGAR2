@@ -31,10 +31,14 @@ The instructions assume that [ROS](https://www.ros.org/) and [Gazebo](http://gaz
 Once ROS and Gazebo are installed, create a workspace and add the Gazebo folder to it and recompile the workspace.
 Then in a terminal, run the following command:
 ```
-roslaunch initiate_simulation.launch
+roslaunch asp_navigation simulation.launch
 ```
 The above command will start the Gazebo simulation in the environment show above with three turtlebots and also run RViz that shows the map already generated using SLAM.
 Then run the following command in a terminal to start rosbridge.
 ```
 roslaunch file_server publish_description_turtlebot2.launch
+```
+The codebase can be deployed to a real robot by running the following command:
+```
+roslaunch asp_navigation bot_bringup.launch
 ```

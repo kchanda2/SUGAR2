@@ -13,3 +13,24 @@ The figures shows the Unity environment with the workbench, the virtual human an
 The figures shows the third person view of the virtual human holding tablet (left), and the first person view of the virtual human looking at the virtual AR interface (right).
 
 ![Image of Unity 3POV](https://github.com/kchanda2/SUGAR2/blob/master/images/human_tablet_resized.png)            ![Image of Zoomed Tablet](https://github.com/kchanda2/SUGAR2/blob/master/images/zoomed_human_tablet.png)
+
+
+# Instructions to run the Unity simulation environment:
+The virtual human and the AR device are simulated in [Unity](https://unity.com/). The simulated environment uses ```Unity 2019.3.0a2```, so to avoid dependency related errors, please install the same version of Unity.
+To import the package to Unity, create a new project, and import the project folder.
+
+# Deploying code to an AR device (Android):
+Ensure that you install ```Android build support``` including ```Android SDK & NDK Tools, and OpenJDK``` by going to Installs in Unity Hub.
+Once the packages are installed, you can connect an Android device in debugging mode. In the build settings, select Android as the platform and click Apply.
+Then, Build and run to deploy the visualizations to an AR device.
+
+# Instructions to run the Gazebo simulation environment:
+The Gazebo environment simulates the multi-robot behaviors. The simualation environment of Gazebo can be found under Gazebo folder.
+The instructions assume that [ROS](https://www.ros.org/) and [Gazebo](http://gazebosim.org/tutorials?tut=ros_overview) are already installed. We use ROS Kinectic in our simulations.
+
+Once ROS and Gazebo are installed, create a workspace and add the Gazebo folder to it and recompile the workspace.
+Then in a terminal, run the following command:
+```
+roslaunch initiate_simulation.launch
+```
+The above command will start the Gazebo simulation in the environment show above with three turtlebots and also run RViz that shows the map already generated using SLAM.

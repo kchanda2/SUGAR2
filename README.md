@@ -26,7 +26,7 @@ Then, Build and run to deploy the visualizations to an AR device.
 
 # Instructions to run the Gazebo simulation environment:
 The Gazebo environment simulates the multi-robot behaviors. The simualation environment of Gazebo can be found under Gazebo folder.
-The instructions assume that [ROS](https://www.ros.org/) and [Gazebo](http://gazebosim.org/tutorials?tut=ros_overview) are already installed. We use ROS Kinectic in our simulations.
+The instructions assume that [ROS](https://www.ros.org/) and [Gazebo](http://gazebosim.org/tutorials?tut=ros_overview) are already installed. We use ROS Kinectic in our simulations. To communicate with Unity, we need to install [ROS#](https://github.com/siemens/ros-sharp). Also, ROS# needs rosbridge_suite to intiate TCP/IP connections with Unity.
 
 Once ROS and Gazebo are installed, create a workspace and add the Gazebo folder to it and recompile the workspace.
 Then in a terminal, run the following command:
@@ -34,3 +34,7 @@ Then in a terminal, run the following command:
 roslaunch initiate_simulation.launch
 ```
 The above command will start the Gazebo simulation in the environment show above with three turtlebots and also run RViz that shows the map already generated using SLAM.
+Then run the following command in a terminal to start rosbridge.
+```
+roslaunch file_server publish_description_turtlebot2.launch
+```

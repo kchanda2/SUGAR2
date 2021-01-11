@@ -20,8 +20,14 @@ The virtual human and the AR device are simulated in [Unity](https://unity.com/)
 To import the package to Unity, create a new project, and import the project folder.
 
 # Deploying code to an AR device (Android):
-Ensure that you install ```Android build support``` including ```Android SDK & NDK Tools, and OpenJDK``` by going to Installs in Unity Hub.
+Ensure that you install ```Android Build Support``` including ```Android SDK & NDK Tools, and OpenJDK``` by going to Installs in Unity Hub.
 Once the packages are installed, you can connect an Android device in debugging mode. In the build settings, select Android as the platform and click Apply.
+Then, Build and run to deploy the visualizations to an AR device.
+
+# Deploying code to Magic Leap Headset:
+Ensure that you install ```Lumin OS (Magic Leap) Build Support``` by going to Installs in Unity Hub.
+Once the packages are installed, you can connect an Magic Leap device or use the Magic Leap simulator to test the AR interface. In the build settings, select Lumin as the platform and click Apply.
+Additionally to deploy the application to Magic Leap, please follow the detailed documentation in [Magic Leap Support](https://developer.magicleap.com/en-us/learn/guides/sdk-deploy-unity-app-to-device).
 Then, Build and run to deploy the visualizations to an AR device.
 
 # Instructions to run the Gazebo simulation environment:
